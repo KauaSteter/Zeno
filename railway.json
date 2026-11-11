@@ -1,0 +1,23 @@
+{
+  "build": {
+    "builder": "DOCKERFILE",
+    "dockerfilePath": "Dockerfile",
+    "healthcheckPath": "/health"
+  },
+  "env": {
+    "APP_ENV": "production",
+    "APP_DEBUG": "false",
+    "APP_URL": "https://zeno-erp.up.railway.app"
+  },
+  "deploy": {
+    "numReplicas": 1,
+    "restartPolicy": "ON_FAILURE",
+    "service": {
+      "constraints": {
+        "node": {
+          "region": "southamerica-east1"
+        }
+      }
+    }
+  }
+}

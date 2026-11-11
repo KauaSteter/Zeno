@@ -1,0 +1,1 @@
+web: php -d variables_order=EGPCS -d request_order=GP -d always_populate_raw_post_data=-1 -d session.cache_httponly=1 -d opcache.enable_cli=0 artisan serve --host=0.0.0.0 --port=${PORT:-8000}
